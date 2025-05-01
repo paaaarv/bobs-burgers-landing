@@ -9,7 +9,6 @@
                 <img src="./images/logo.svg" alt="Bob's Burger's logo">
             </div>
             <div id="heading">
-                <h1> Bob's Burgers </h1> 
                 <p> We're doing the best we can, one burger at a time. </p>
             </div>
             <nav>
@@ -36,6 +35,26 @@
             <section id="contact">
                 <h2> I'd rather you didn't. </h2> 
                 <div id="contact-form">
+                    <form> 
+                        <label for="name">Name </label> 
+                        <input id="name" type="text"> 
+                        <label for="email">Email </label> 
+                        <input id="email" type="email"> 
+                        <label for="phone">Phone Number </label> 
+                        <input id="phone" type="tel">
+                        <fieldset>
+                            <legend> Preferred Contact Method </legend> 
+                            <input type="radio" name="radio-email"> 
+                            <label for="radio-email"> Email</label>
+                            <input type="radio" name="radio-phone"> 
+                            <label for="radio-phone">Phone</label>
+
+                        </fieldset> 
+                        <label for="comments">Comments</label> 
+                        <textarea id="comments">
+                        </textarea> 
+                        <input type="submit">
+                    </form> 
                 </div>
             </section> 
         </main>
