@@ -38,6 +38,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    margin:auto;
 }
 ol, ul {
 	list-style: none;
@@ -56,20 +57,20 @@ table {
 }
 /* color variables*/ 
 :root {
-    --yellow: #f2d028;
-    --red: #d92b3a;
-    --white:#ffffff;
-    --green:#96a338;
-    --blue:#a2d3f1;
-    --brown:#bf8553;
+    --highlight: #f2d028;
+    --headings: #d92b3a;
+    --highlight-text:#96a338;
+    --background:#a2d3f1;
+    --text:#bf8553;
     --black:#000000;
+    --white:#ffffff;
   }
 
 /* GLOBAL STYLES */ 
 
 body{
-    color: var(--brown);
-    background-color: var(--blue);
+    color: var(--highlight-text);
+    background-color: var(--background);
     width: 1280px; 
     font-family: "PT Sans", sans-serif;
 }
@@ -78,7 +79,7 @@ h1{
 }
 
 h2{
-    color: var(--red);
+    color: var(--headings);
     font-size: 3em; 
     text-align: center; 
     font-family: 'Bobs Burgers', sans-serif;
@@ -90,8 +91,8 @@ p, label, legend{
 header{
     display: grid;
     grid-template-columns: 1fr 2fr; 
-    background-color: var(--yellow);
-    color: var(--green);
+    background-color: var(--highlight);
+    color: var(--highlight-text);
     font-family: 'Bobs Burgers', sans-serif;
     padding: 32px;
 }
@@ -104,7 +105,7 @@ header{
 }
 nav ul{
     display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: 1fr 1fr 1fr 1fr auto; 
     margin-left: 20px;
 }
 nav li{
@@ -134,9 +135,9 @@ nav li{
 /*contact form styling */ 
 
 #contact{
-    background-color:var(--yellow);
+    background-color:var(--highlight);
     padding: 32px; 
-    margin: auto;
+    width:100%;
 }
 #contact label, legend{
     margin-top: 20px;
@@ -155,19 +156,24 @@ nav li{
 }
 #contact input, textarea {
     background-color: transparent; 
-    border: 5px solid var(--green);
+    border: 5px solid var(--text);
     margin: 5px;
     padding: 10px;
 }
-input[type="submit"]{
+ input[type="submit"]{
     width: 25%; 
     padding: 10px; 
     margin: 10px auto !important;
     font-family: 'Bobs Burgers', sans-serif; 
     font-size: 2em;
-    border: 5px solid var(--green) !important;
+    border: 5px solid var(--text) !important;
 }
 .errors-div{
-    color:var(--red);
+    color:var(--headings);
     font-weight: bold; 
+}
+
+/*guessing game styling */
+#guessing-game{
+    display: block; 
 }

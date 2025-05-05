@@ -4,6 +4,10 @@
 
 document.getElementById("dark-mode").addEventListener("click", function(event) {
     console.log('moon clicked');
+    let root = document.documentElement; 
+    root.style.setProperty('--highlight', "#a2d3f1");
+    root.style.setProperty('--headings', "#bf8553");
+    root.style.setProperty('--background', "#000000"); 
 })
 // form functions // 
 
@@ -111,3 +115,36 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     }
     createCustomer();       
  });
+
+ // guessing game // 
+
+ function validateGuess(){
+    let guess = document.getElementById("guess").value; 
+    let isValid = true; 
+    if (guess < 1 || guess > 10){
+        let errorDiv = document.getElementById("guess-error"); 
+        errorDiv.innerHTML = "Please enter a number from 1-10.";
+        isValid=false;
+    }
+    return isValid; 
+ }
+ function guessGame(){
+    let userGuess = document.getElementById("guess").value;
+    let targetGuess = Math.floor(Math.random() * 10) + 1;
+    let responseDiv = document.getElementById("guess-game");
+    if (parseInt(userGuess) === targetGuess){
+        responseDiv.innerHTML = `Congrats! You get a free burger! Your guess was ${userGuess}`;
+    }else{
+        responseDiv.innerHTML = `Sorry! Your guess was ${userGuess} and the number was ${targetGuess}`; 
+    }
+ }
+
+ document.getElementById("guess-form").addEventListener("submit",function(event){
+    event.preventDefault();
+    clearErrors(); 
+    if (!validateGuess()){
+        return;
+    }
+    guessGame();
+
+ })
