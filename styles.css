@@ -54,13 +54,22 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+/* color variables*/ 
+:root {
+    --yellow: #f2d028;
+    --red: #d92b3a;
+    --white:#ffffff;
+    --green:#96a338;
+    --blue:#a2d3f1;
+    --brown:#bf8553;
+    --black:#000000;
+  }
 
 /* GLOBAL STYLES */ 
 
 body{
-    color: #bf8553;
-    background-color: #a2d3f1;
+    color: var(--brown);
+    background-color: var(--blue);
     width: 1280px; 
     font-family: "PT Sans", sans-serif;
 }
@@ -69,7 +78,7 @@ h1{
 }
 
 h2{
-    color: #d92b3a;
+    color: var(--red);
     font-size: 3em; 
     text-align: center; 
     font-family: 'Bobs Burgers', sans-serif;
@@ -80,9 +89,10 @@ p, label, legend{
 /* header and nav styling*/ 
 header{
     display: grid;
-    grid-template-columns: 0.5fr 1fr 2fr; 
-    background-color: #f2d028;
-    color: #96a338;
+    grid-template-columns: 1fr 2fr; 
+    background-color: var(--yellow);
+    color: var(--green);
+    font-family: 'Bobs Burgers', sans-serif;
     padding: 32px;
 }
 #logo {
@@ -90,20 +100,25 @@ header{
     height: auto;
 }
 #logo img{
-    width: 90%;
+    width: 50%;
 }
 nav ul{
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
     margin-left: 20px;
 }
-
+nav li{
+    font-size: 2em;
+}
+#dark-mode{
+    width: 25px;
+    height: 25px;
+}
 /* about section styling */ 
 #about{
     width: 80%; 
     margin: auto; 
     margin-top: 50px;
-    background-color: #ffffff; 
     padding: 20px;
     display: flex; 
 }
@@ -119,12 +134,17 @@ nav ul{
 /*contact form styling */ 
 
 #contact{
-    background-color:#f2d028;
+    background-color:var(--yellow);
     padding: 32px; 
     margin: auto;
 }
+#contact label, legend{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+} 
 #contact form {
-    background-color:#ffffff;
+    background-color:var(--white);
     width: 50%; 
     margin: 20px auto;
     padding: 20px; 
@@ -135,9 +155,9 @@ nav ul{
 }
 #contact input, textarea {
     background-color: transparent; 
-    border: none; 
-    border-bottom: 5px solid #96a338;
+    border: 5px solid var(--green);
     margin: 5px;
+    padding: 10px;
 }
 input[type="submit"]{
     width: 25%; 
@@ -145,5 +165,9 @@ input[type="submit"]{
     margin: 10px auto !important;
     font-family: 'Bobs Burgers', sans-serif; 
     font-size: 2em;
-    border: 5px solid #96a338 !important;
+    border: 5px solid var(--green) !important;
+}
+.errors-div{
+    color:var(--red);
+    font-weight: bold; 
 }
