@@ -76,29 +76,37 @@ body{
     font-family: "Patrick Hand", cursive;
 }
 h1{
-    font-size: 3em; 
+    font-size: 3.5em; 
     text-align: center;
     margin: 20px;
+    font-family: "Bobs Burgers", sans-serif;
+    font-weight: bold;
+    color: var(--headings); 
 }
 
 h2{
-    color: var(--headings);
-    font-size: 3em; 
+    color: var(--highlight-text);
+    font-size: 2.5em; 
     font-family: 'Permanent Marker', cursive;
     margin: 10px;
     text-align: center;
 }
+h3{
+    font-size: 2em;
+}
 p, label, legend{
     font-size: 1.25em;
 }
+
 /* header and nav styling*/ 
 header{
     display: grid;
     grid-template-columns: 1fr 2fr; 
     background-color: var(--highlight);
-    font-family: 'Bobs Burgers', sans-serif;
+    font-family: 'Patrick Hand', cursive;
     padding: 24px;
 }
+
 #logo {
     width: 70%;
     height: auto;
@@ -127,8 +135,7 @@ nav li a {
 /* about section styling */ 
 #about{
     width: 80%; 
-    margin: auto; 
-    margin-top: 50px;
+    margin: 50px auto 10px;
     padding: 50px 20px;
     background-color: var(--white); 
     border-radius: 20px; 
@@ -162,14 +169,13 @@ nav li a {
 #button-specials button{
     background-color: transparent; 
     padding: 10px; 
-    border: 5px solid var(--highlight-text);
-    color: var(--highlight-text);
+    border: 5px solid var(--highlight);
+    color: var(--highlight);
     margin: 5px;
 }
 /*contact form styling */ 
 
 #contact{
-    background-color:var(--highlight);
     padding: 32px; 
     width:100%;
 }
