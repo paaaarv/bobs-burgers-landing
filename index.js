@@ -5,9 +5,10 @@
 document.getElementById("dark-mode").addEventListener("click", function(event) {
     console.log('moon clicked');
     let root = document.documentElement; 
+    var element = document.body;
+    element.classList.toggle("dark-mode");
     root.style.setProperty('--highlight', "#a2d3f1");
     root.style.setProperty('--headings', "#bf8553");
-    root.style.setProperty('--background', "#000000"); 
 })
 // form functions // 
 

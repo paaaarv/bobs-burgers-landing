@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&display=swap');
 @font-face {
     font-family: 'Bobs Burgers';
     src: URL('fonts/Bob\'s\ Burgers.ttf') format('truetype');
@@ -72,7 +72,7 @@ body{
     color: var(--highlight-text);
     background-color: var(--background);
     width: 1280px; 
-    font-family: "PT Sans", sans-serif;
+    font-family: "Patrick Hand", cursive;
 }
 h1{
     font-size: 3em; 
@@ -82,7 +82,7 @@ h2{
     color: var(--headings);
     font-size: 3em; 
     text-align: center; 
-    font-family: 'Bobs Burgers', sans-serif;
+    font-family: 'Permanent Marker', cursive;
 }
 p, label, legend{
     font-size: 1.25em;
@@ -114,6 +114,10 @@ nav li{
 #dark-mode{
     width: 25px;
     height: 25px;
+}
+.dark-mode{
+    background-color: #123e59; 
+    color: #b4c062; 
 }
 /* about section styling */ 
 #about{
@@ -174,6 +178,35 @@ nav li{
 }
 
 /*guessing game styling */
+#win{
+    background-color: var(--white);
+    width: 60%; 
+    border-radius: 50%; 
+    margin: 10px auto; 
+    padding: 250px 0px;
+}
 #guessing-game{
-    display: block; 
+    width: 50%;
+    margin: auto; 
+}
+#guessing-game form{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: "label guess"
+        "button button"; 
+}
+#guessing-game label{
+    grid-area: label;
+}
+#guess{
+    grid-area: guess;
+    background: transparent;
+    border: none;
+    border-bottom: 5px solid var(--text); 
+    width: 50%; 
+    justify-self: start;  
+}
+#guess-button{
+    grid-area: button;
+    width: 75%; 
 }
