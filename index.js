@@ -10,6 +10,41 @@ document.getElementById("dark-mode").addEventListener("click", function(event) {
     root.style.setProperty('--highlight', "#a2d3f1");
     root.style.setProperty('--headings', "#bf8553");
 })
+
+//product switching functions 
+
+document.getElementById("cheddar-burger").addEventListener("click", function(event){
+    let burgerImg = document.getElementById("burger-img");
+    let heading = document.getElementById("burger-heading");
+    let about = document.getElementById("burger-about"); 
+    let price = document.getElementById("burger-price"); 
+
+    burgerImg.src="images/dont_u_for_cheddar_bout_me.png";
+    heading.innerHTML = "Don't You Four Cheddar About Me";
+    about.innerHTML = "Four different cheddars in this burger"; 
+    price.innerHTML = "$10.00";
+
+})
+document.getElementById("beet-burger").addEventListener("click", function(event){
+    let burgerImg = document.getElementById("burger-img");
+    let heading = document.getElementById("burger-heading");
+    let about = document.getElementById("burger-about"); 
+    let price = document.getElementById("burger-price"); 
+    burgerImg.src="images/beeter_late_than_never.png";
+    heading.innerHTML = "Beeter Late Than Never";
+    about.innerHTML = "More beets"; 
+    price.innerHTML = "$8.95";
+})
+document.getElementById("avocado-burger").addEventListener("click", function(event){
+    let burgerImg = document.getElementById("burger-img");
+    let heading = document.getElementById("burger-heading");
+    let about = document.getElementById("burger-about"); 
+    let price = document.getElementById("burger-price"); 
+    burgerImg.src="images/sweet_home_avocado.png";
+    heading.innerHTML = "Sweet Home Avocado";
+    about.innerHTML = "Like your favorite movie. But with avocado"; 
+    price.innerHTML = "$11.95";
+})
 // form functions // 
 
 function validateForm(){

@@ -64,6 +64,7 @@ table {
     --text:#bf8553;
     --black:#000000;
     --white:#ffffff;
+    --gray: #373737;
   }
 
 /* GLOBAL STYLES */ 
@@ -76,13 +77,16 @@ body{
 }
 h1{
     font-size: 3em; 
+    text-align: center;
+    margin: 20px;
 }
 
 h2{
     color: var(--headings);
     font-size: 3em; 
-    text-align: center; 
     font-family: 'Permanent Marker', cursive;
+    margin: 10px;
+    text-align: center;
 }
 p, label, legend{
     font-size: 1.25em;
@@ -92,9 +96,8 @@ header{
     display: grid;
     grid-template-columns: 1fr 2fr; 
     background-color: var(--highlight);
-    color: var(--highlight-text);
     font-family: 'Bobs Burgers', sans-serif;
-    padding: 32px;
+    padding: 24px;
 }
 #logo {
     width: 70%;
@@ -108,8 +111,10 @@ nav ul{
     grid-template-columns: 1fr 1fr 1fr 1fr auto; 
     margin-left: 20px;
 }
-nav li{
+nav li a {
     font-size: 2em;
+    text-decoration: none; 
+    color: var(--text);
 }
 #dark-mode{
     width: 25px;
@@ -124,18 +129,43 @@ nav li{
     width: 80%; 
     margin: auto; 
     margin-top: 50px;
-    padding: 20px;
+    padding: 50px 20px;
+    background-color: var(--white); 
+    border-radius: 20px; 
     display: flex; 
 }
- 
+ .text-content{
+    width: 50%; 
+    padding: 10px; 
+ }
 .image-content{
     width: 50%; 
 }
 .image-content img{
     max-width: 100%;
+    border-radius: 20px;
 }
-
-
+/*product choosing styling*/ 
+#specials{
+    padding: 50px; 
+    background-color: var(--gray);
+}
+#special{
+    margin: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+#button-specials{
+    text-align: center;
+}
+#button-specials button{
+    background-color: transparent; 
+    padding: 10px; 
+    border: 5px solid var(--highlight-text);
+    color: var(--highlight-text);
+    margin: 5px;
+}
 /*contact form styling */ 
 
 #contact{
